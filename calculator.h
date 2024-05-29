@@ -4,5 +4,11 @@ struct Calculator {
 	Number* registers[10];
 };
 
-Value add(Value value_one, Value value_two);
+Number* add(const int64_t value_one, const int64_t value_two, const Base base);
+
+Number* subtract(const int64_t value_one, const int64_t value_two, const Base base);
+
+Number* multiply(const int64_t value_one, const int64_t value_two, const Base base);
+
+Number* divide(const int64_t value_one, const int64_t value_two, const Base base);
 

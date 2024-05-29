@@ -2,6 +2,7 @@
 #include <stdint.h>
 
 typedef enum BASE_ENUM {
+	UNDEFINED = 0,
 	BINARY = 2,
 	OCTAL = 8,
 	DECIMAL = 10,
@@ -10,19 +11,19 @@ typedef enum BASE_ENUM {
 
 
 struct NUMBER_TYPE {
-	__int64_t value;
+	int64_t value;
 	Base base;
 };
 typedef struct NUMBER_TYPE Number;
 
-Number* newNumber(__int64_t value, Base base);
+Number* newNumber(int64_t value, Base base);
 void deleteNumber(Number* number);
 
 
-char* toBinaryString(__int64_t value);
-char* toOctalString(__int64_t value);
-char* toDecimalString(__int64_t value);
-char* toHexadecimalString(__int64_t value);
+char* toBinaryString(int64_t value);
+char* toOctalString(int64_t value);
+char* toDecimalString(int64_t value);
+char* toHexadecimalString(int64_t value);
 
 // i =       42;
 // i =     0x2a;
