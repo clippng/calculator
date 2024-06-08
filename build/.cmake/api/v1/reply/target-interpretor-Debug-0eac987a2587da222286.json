@@ -1,0 +1,119 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "calculator/interpretor/libinterpretor.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"calculator/interpretor/CMakeLists.txt",
+			"calculator/maths/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/tom/Desktop/GitHub/calculator/calculator/interpretor"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/tom/Desktop/GitHub/calculator/calculator/maths"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "maths::@44afdd2aa44ae4468f07"
+		}
+	],
+	"id" : "interpretor::@3d363e065b3f831834be",
+	"name" : "interpretor",
+	"nameOnDisk" : "libinterpretor.a",
+	"paths" : 
+	{
+		"build" : "calculator/interpretor",
+		"source" : "calculator/interpretor"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "calculator/interpretor/interpretor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "calculator/interpretor/lexer.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

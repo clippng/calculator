@@ -1,12 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
+set(CMAKE_C_STANDARD)
+
 project(Calculator)
 
-add_executable(
-Calculator
-
-calculator.c
-number.c
-
-calculator.h
-)
+add_subdirectory(calculator)

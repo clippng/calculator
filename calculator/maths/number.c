@@ -3,12 +3,26 @@
 
 #define CRITICAL_ERROR_INSUFFICIENT_MEMORY = 10;
 
+enum baseType {
+	UNDEFINED = 0,
+	BINARY = 2,
+	OCTAL = 8,
+	DECIMAL = 10,
+	HEXADECIMAL = 16
+};
+
+struct number {
+	bool empty;
+	int64_t value;
+	Base base;
+};
+
 Number* newNumber(int64_t value, Base base) {
 	Number *number = (Number*)malloc(sizeof(Number));
 	if (number == NULL) {
 		exit(1);
 	}
-	number-> value = value;
+	number->value = value;
 	number->base = base;
 	
 	return number;

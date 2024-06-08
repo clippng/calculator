@@ -1,20 +1,9 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef enum BASE_ENUM {
-	UNDEFINED = 0,
-	BINARY = 2,
-	OCTAL = 8,
-	DECIMAL = 10,
-	HEXADECIMAL = 16
-} Base;
+typedef enum baseType Base;
 
-
-struct NUMBER_TYPE {
-	int64_t value;
-	Base base;
-};
-typedef struct NUMBER_TYPE Number;
+typedef struct number Number;
 
 Number* newNumber(int64_t value, Base base);
 void deleteNumber(Number* number);

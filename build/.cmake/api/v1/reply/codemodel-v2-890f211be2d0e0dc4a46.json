@@ -1,0 +1,142 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "calculator",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-calculator-Debug-da0987a7be6bd5f44e8d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "calculator"
+				},
+				{
+					"build" : "calculator/interpretor",
+					"jsonFile" : "directory-calculator.interpretor-Debug-40e90dbb53f5ff946c9f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "calculator/interpretor",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "calculator/maths",
+					"jsonFile" : "directory-calculator.maths-Debug-83feafd62506406343b0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "calculator/maths",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "calculator/src",
+					"jsonFile" : "directory-calculator.src-Debug-cb842596cba9791bf92c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "calculator/src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "Calculator",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "Calculator::@ca6807524d3de43e1b4f",
+					"jsonFile" : "target-Calculator-Debug-e5e65a451d9febc4bc5d.json",
+					"name" : "Calculator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "interpretor::@3d363e065b3f831834be",
+					"jsonFile" : "target-interpretor-Debug-0eac987a2587da222286.json",
+					"name" : "interpretor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "maths::@44afdd2aa44ae4468f07",
+					"jsonFile" : "target-maths-Debug-e1625a423ce540c29b91.json",
+					"name" : "maths",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tom/Desktop/GitHub/calculator/build",
+		"source" : "/home/tom/Desktop/GitHub/calculator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

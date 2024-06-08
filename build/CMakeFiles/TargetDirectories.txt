@@ -1,0 +1,13 @@
+/home/tom/Desktop/GitHub/calculator/build/CMakeFiles/edit_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/CMakeFiles/rebuild_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/CMakeFiles/edit_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/CMakeFiles/rebuild_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/interpretor/CMakeFiles/interpretor.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/interpretor/CMakeFiles/edit_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/interpretor/CMakeFiles/rebuild_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/maths/CMakeFiles/maths.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/maths/CMakeFiles/edit_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/maths/CMakeFiles/rebuild_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/src/CMakeFiles/Calculator.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/src/CMakeFiles/edit_cache.dir
+/home/tom/Desktop/GitHub/calculator/build/calculator/src/CMakeFiles/rebuild_cache.dir

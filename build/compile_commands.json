@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/tom/Desktop/GitHub/calculator/build",
+  "command": "/usr/bin/cc -I/home/tom/Desktop/GitHub/calculator/calculator/interpretor -I/home/tom/Desktop/GitHub/calculator/calculator/maths -g -o calculator/interpretor/CMakeFiles/interpretor.dir/interpretor.c.o -c /home/tom/Desktop/GitHub/calculator/calculator/interpretor/interpretor.c",
+  "file": "/home/tom/Desktop/GitHub/calculator/calculator/interpretor/interpretor.c",
+  "output": "calculator/interpretor/CMakeFiles/interpretor.dir/interpretor.c.o"
+},
+{
+  "directory": "/home/tom/Desktop/GitHub/calculator/build",
+  "command": "/usr/bin/cc -I/home/tom/Desktop/GitHub/calculator/calculator/interpretor -I/home/tom/Desktop/GitHub/calculator/calculator/maths -g -o calculator/interpretor/CMakeFiles/interpretor.dir/lexer.c.o -c /home/tom/Desktop/GitHub/calculator/calculator/interpretor/lexer.c",
+  "file": "/home/tom/Desktop/GitHub/calculator/calculator/interpretor/lexer.c",
+  "output": "calculator/interpretor/CMakeFiles/interpretor.dir/lexer.c.o"
+},
+{
+  "directory": "/home/tom/Desktop/GitHub/calculator/build",
+  "command": "/usr/bin/cc -I/home/tom/Desktop/GitHub/calculator/calculator/interpretor -I/home/tom/Desktop/GitHub/calculator/calculator/maths -g -o calculator/maths/CMakeFiles/maths.dir/calculator.c.o -c /home/tom/Desktop/GitHub/calculator/calculator/maths/calculator.c",
+  "file": "/home/tom/Desktop/GitHub/calculator/calculator/maths/calculator.c",
+  "output": "calculator/maths/CMakeFiles/maths.dir/calculator.c.o"
+},
+{
+  "directory": "/home/tom/Desktop/GitHub/calculator/build",
+  "command": "/usr/bin/cc -I/home/tom/Desktop/GitHub/calculator/calculator/interpretor -I/home/tom/Desktop/GitHub/calculator/calculator/maths -g -o calculator/maths/CMakeFiles/maths.dir/number.c.o -c /home/tom/Desktop/GitHub/calculator/calculator/maths/number.c",
+  "file": "/home/tom/Desktop/GitHub/calculator/calculator/maths/number.c",
+  "output": "calculator/maths/CMakeFiles/maths.dir/number.c.o"
+},
+{
+  "directory": "/home/tom/Desktop/GitHub/calculator/build",
+  "command": "/usr/bin/cc -I/home/tom/Desktop/GitHub/calculator/calculator/interpretor -I/home/tom/Desktop/GitHub/calculator/calculator/maths -g -o calculator/src/CMakeFiles/Calculator.dir/main.c.o -c /home/tom/Desktop/GitHub/calculator/calculator/src/main.c",
+  "file": "/home/tom/Desktop/GitHub/calculator/calculator/src/main.c",
+  "output": "calculator/src/CMakeFiles/Calculator.dir/main.c.o"
+}
+]
