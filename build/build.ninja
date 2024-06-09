@@ -45,7 +45,7 @@ cmake_ninja_workdir = /home/tom/Desktop/GitHub/calculator/build/
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build && /usr/bin/ccmake -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
+  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build && /usr/bin/cmake-gui -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -74,7 +74,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build calculator/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator && /usr/bin/ccmake -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
+  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator && /usr/bin/cmake-gui -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -142,7 +142,7 @@ build calculator/interpretor/libinterpretor.a: C_STATIC_LIBRARY_LINKER__interpre
 # Utility command for edit_cache
 
 build calculator/interpretor/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator/interpretor && /usr/bin/ccmake -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
+  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator/interpretor && /usr/bin/cmake-gui -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -210,7 +210,7 @@ build calculator/maths/libmaths.a: C_STATIC_LIBRARY_LINKER__maths_Debug calculat
 # Utility command for edit_cache
 
 build calculator/maths/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator/maths && /usr/bin/ccmake -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
+  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator/maths && /usr/bin/cmake-gui -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -272,7 +272,7 @@ build calculator/src/Calculator: C_EXECUTABLE_LINKER__Calculator_Debug calculato
 # Utility command for edit_cache
 
 build calculator/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator/src && /usr/bin/ccmake -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
+  COMMAND = cd /home/tom/Desktop/GitHub/calculator/build/calculator/src && /usr/bin/cmake-gui -S/home/tom/Desktop/GitHub/calculator -B/home/tom/Desktop/GitHub/calculator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1

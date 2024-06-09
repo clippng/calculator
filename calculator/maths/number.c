@@ -1,36 +1,52 @@
 #include "number.h"
-#include <stdlib.h>
 
-#define CRITICAL_ERROR_INSUFFICIENT_MEMORY = 10;
+#include <string.h>
+#include <math.h>
 
-enum baseType {
-	UNDEFINED = 0,
-	BINARY = 2,
-	OCTAL = 8,
-	DECIMAL = 10,
-	HEXADECIMAL = 16
-};
-
-struct number {
-	bool empty;
+Number stringToBinary(char *string) {
 	int64_t value;
-	Base base;
-};
-
-Number* newNumber(int64_t value, Base base) {
-	Number *number = (Number*)malloc(sizeof(Number));
-	if (number == NULL) {
-		exit(1);
+	for (int i = strlen(string), place = 0; i > 0; --i, ++place) {
+		if (string[i] == '1') {
+			value += pow((double)2, (double)place);
+		}
 	}
-	number->value = value;
-	number->base = base;
-	
+	Number number = { .empty = false, .base = BINARY, .value = value };
 	return number;
 }
 
-void deleteNumber(Number* number) {
-	// do some other stuff
-	free(number);
+Number stringToOctal(char *string) {
+	int64_t value;
+	for (int i = strlen(string), place = 0; i > 0; --i, ++place) {
+		int num = string[i] - 48;
+		value += num * pow((double)8, (double)place);
+	}
+	Number number = { .empty = false, .base = OCTAL, .value = value };
+	return number;
+}
+
+Number stringToDecimal(char *string) {
+	int64_t value;
+	for (int i = strlen(string), place = 0; i > 0; --i, ++place) {
+		int num = string[i] - 48;
+		value += num * pow((double)10, (double)place);
+	}
+	Number number = { .empty = false, .base = DECIMAL, .value = value };
+	return number;
+}
+
+Number stringToHexadecimal(char *string) {
+	int64_t value;
+	for (int i = strlen(string), place = 0; i > 0; --i, ++place) {
+		int num;
+		if (string[i] < 58) {
+			num = string[i] - 48;
+		} else {
+			num = string[i] - 55;
+		}
+		value += num * pow((double)16, (double)place);
+	}
+	Number number = { .empty = false, .base = BINARY, .value = value };
+	return number;
 }
 
 char* toString(Number *number) {

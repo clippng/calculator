@@ -1,0 +1,12 @@
+# ninja log v6
+1	40	1717897133102715649	calculator/interpretor/CMakeFiles/interpretor.dir/interpretor.c.o	664b3cf369249232
+46	63	1717897208215584494	calculator/interpretor/libinterpretor.a	ec913c7c624ccb8
+1	15	1717897297655027957	calculator/src/CMakeFiles/Calculator.dir/main.c.o	f6de5a8469e2b2f2
+1	21	1717897473257508880	calculator/maths/CMakeFiles/maths.dir/number.c.o	1b3e014b58b9e1ec
+1	49	1717897133102715649	calculator/interpretor/CMakeFiles/interpretor.dir/lexer.c.o	6485eb4dc8d58f03
+22	41	1717897473280842173	calculator/maths/libmaths.a	fe01dae328eb10df
+1	22	1717897473257508880	calculator/maths/CMakeFiles/maths.dir/calculator.c.o	3b874599d89456aa
+63	78	1717897208235584369	calculator/src/Calculator	245c8ff79ae2e413
+1	21	1717897696646960525	calculator/maths/CMakeFiles/maths.dir/calculator.c.o	3b874599d89456aa
+1	22	1717897696646960525	calculator/maths/CMakeFiles/maths.dir/number.c.o	1b3e014b58b9e1ec
+22	42	1717897696670293787	calculator/maths/libmaths.a	fe01dae328eb10df

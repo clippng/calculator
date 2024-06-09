@@ -1,13 +1,24 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef enum baseType Base;
+typedef enum baseType {
+	UNDEFINED = 0,
+	BINARY = 2,
+	OCTAL = 8,
+	DECIMAL = 10,
+	HEXADECIMAL = 16
+} Base;
 
-typedef struct number Number;
+typedef struct number {
+	bool empty;
+	Base base;
+	int64_t value;
+} Number;
 
-Number* newNumber(int64_t value, Base base);
-void deleteNumber(Number* number);
-
+Number stringToBinary(char *string);
+Number stringToOctal(char *string);
+Number stringToDecimal(char *string);
+Number stringToHexadecimal(char *string);
 
 char* toBinaryString(int64_t value);
 char* toOctalString(int64_t value);

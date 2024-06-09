@@ -1,69 +1,110 @@
 #include "lexer.h"
-#include "number.h"
 
+#include <ctype.h>
 #include <string.h>
+#include <stdio.h>
 
-enum tokenType {
-	// operators
-	OPEN_BRACKET,
-	CLOSE_BRACKET,
-	PLUS,
-	MINUS,
-	MULTIPLY,
-	DIVIDE,
-	EQUALS,
-	GREATER_THAN,
-	LESS_THAN,
+#define NUMBER_SUBSTRING_LOOP(str, pos) while ((str[pos] > 47 && str[pos] < 58) || (str[pos] > 64 && str[pos] < 71)) { ++pos; }
 
-	// values
-	INTEGER_BASE_2,
-	INTEGER_BASE_6,
-	INTEGER_BASE_10,
-	INTEGER_BASE_16,
-	FLOAT_BASE_2,
-	FLOAT_BASE_6,
-	FLOAT_BASE_10,
-	FLOAT_BASE_16,
-	VARIABLE,
-	COMPLEX,
-	ZERO,
-
-	// special tokens
-	TERMINATED
-};
-
-struct token {
-	TokenType type;
-	Number value;
-};
-
-struct scanner {
-	char* source_string;
-	Token tokens[];
-};
-
-Token scanTokens(Scanner scanner) {
-	// put all tokens in with spaces and then format later
-	Token tokens[strlen(scanner.source_string)];
-	int current;
-	for (current = 0; current < strlen(scanner.source_string); ++current) {
+void scanTokens(Lexer *scanner) {
+	int current_string_index;
+	int current_token_index;
+	for (current_string_index = 0; current_string_index < strlen(scanner->source_string); ++current_string_index) {
 		Token token;
-		switch (scanner.source_string[current]) {
-			case '(':
-				token.type = OPEN_BRACKET;
-				token.value = NULL;
-			case ')':
-				token.type = OPEN_BRACKET;
-				token.value = NULL;
-
-			case '0':
-				switch (scanner.source_string[current + 1]) {
-					case 'x':
-						token.type = INTEGER_BASE_16;
+		switch (scanner->source_string[current_string_index]) {
+			case ' ': break;
+			case '(': token.type = OPEN_BRACKET; break;
+			case ')': token.type = CLOSE_BRACKET; break;
+			case '+': token.type = PLUS; break;
+			case '-': token.type = MINUS; break;
+			case '*': token.type = MULTIPLY; break;
+			case '/':  
+				if (scanner->source_string[current_string_index + 1] == '/') {
+					token.type = FLOOR_DIVISON;
+					++current_string_index;
+				} else {
+					token.type = DIVIDE;
 				}
+				break;
+			case '%': token.type = MODULUS; break;
+			case '=': token.type = EQUALS; break;
+			case '>': 
+				if (scanner->source_string[current_string_index + 1] == '=') {
+					token.type = GREATER_THAN_OR_EQUAL;
+					++current_string_index;
+				} else {
+					token.type = GREATER_THAN; 
+				}
+				break;
+			case '<': 
+				if (scanner->source_string[current_string_index + 1] == '=') {
+					token.type = LESS_THAN_OR_EQUAL;
+					++current_string_index;
+				} else {
+					token.type = LESS_THAN; 
+				}
+				break;
+			case '^': token.type = EXPONENT; break;
+			case '$': token.type = ROOT; break;
+			case '@': token.type = LOG; break;
+			case '!': token.type = FACTORIAL; break;
+			case '|': token.type = ABSOLOUTE_VALUE; break;
+
+			case 'r': 
+				if (scanner->source_string[current_string_index + 1] == 'o' &&
+					scanner->source_string[current_token_index + 2] == 'o' &&
+					scanner->source_string[current_string_index + 3] == 't') {
+						token.type = ROOT;
+						current_string_index +=3;
+					} 
+				break;
+			default:
+				if (isdigit(scanner->source_string[current_string_index])) {
+					if (scanner->source_string[current_token_index] == '0') {
+						if (scanner->source_string[current_string_index + 1] == 'b') {
+							token.type = BASE_2;
+							char* number_str;
+							int j = current_string_index;
+							NUMBER_SUBSTRING_LOOP(scanner->source_string, j)
+								number_str += scanner->source_string[current_string_index + j];
+							token.value = stringToBinary(number_str);
+							current_string_index += current_string_index - j;
+						} else if (scanner->source_string[current_string_index + 1] == 'o') {
+							token.type = BASE_8;
+							char* number_str;
+							int j = current_string_index;
+							NUMBER_SUBSTRING_LOOP(scanner->source_string, j)
+								number_str += scanner->source_string[current_string_index + j];
+							token.value = stringToOctal(number_str);
+							current_string_index += current_string_index - j;
+						} else if (scanner->source_string[current_string_index + 1] == 'x') {
+							token.type = BASE_16;
+							char* number_str;
+							int j = current_string_index;
+							NUMBER_SUBSTRING_LOOP(scanner->source_string, j)
+								number_str += scanner->source_string[current_string_index + j];
+							token.value = stringToHexadecimal(number_str);
+							current_string_index += current_string_index - j;
+						} else if (!isdigit(scanner->source_string[current_string_index + 1])){
+							token.type = ZERO;
+						} else {
+							token.type = BASE_10;
+							char* number_str;
+							int j = current_string_index;
+							NUMBER_SUBSTRING_LOOP(scanner->source_string, j)
+								number_str += scanner->source_string[current_string_index + j];
+							token.value = stringToDecimal(number_str);
+							current_string_index += current_string_index - j;
+						}
+					}
+				} else {
+					perror(&scanner->source_string[current_string_index]);
+				};
+
 		}
+		scanner->tokens[current_token_index] = token;
+		++current_token_index;
 	}
-
-
 }
+
 

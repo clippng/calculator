@@ -411,7 +411,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ccmake"
+			"value" : "/usr/bin/cmake-gui"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -983,7 +983,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "NO"
+			"value" : "OFF"
 		},
 		{
 			"name" : "CMAKE_SKIP_RPATH",
@@ -999,7 +999,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "NO"
+			"value" : "OFF"
 		},
 		{
 			"name" : "CMAKE_STATIC_LINKER_FLAGS",
@@ -1139,7 +1139,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "FALSE"
+			"value" : "OFF"
 		},
 		{
 			"name" : "Calculator_BINARY_DIR",
